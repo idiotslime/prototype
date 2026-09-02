@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>旅しるべ｜あなたに合った日本の旅</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-mark">旅</span>
+            <div>
+                <strong>旅しるべ</strong>
+                <small>あなたに合った日本の旅</small>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a href="#home">ホーム</a>
+            <a href="#diagnosis">旅行先診断</a>
+            <a href="#regions">地域から探す</a>
+            <a href="#about">このサイトについて</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         メイン
+    ========================== -->
+
+    <main>
+
+        <!-- ヒーロー -->
+        <section id="home" class="hero">
+
+            <div class="hero-decoration decoration-one">✿</div>
+            <div class="hero-decoration decoration-two">❀</div>
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">YOUR JAPAN TRIP</p>
+
+                    <h1>
+                        どこへ<br>
+                        <span>行きたい？</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        いくつかの質問に答えるだけで、<br>
+                        あなたにぴったりの日本旅行を見つけます。
+                    </p>
+
+                    <button class="main-button" id="startButton">
+                        旅行先診断を始める
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <!-- キャラクター用スペース -->
+                <div class="character-area"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             診断セクション
+        ========================== -->
+
+        <section id="diagnosis" class="diagnosis-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">TRAVEL DIAGNOSIS</p>
+
+                <h2>
+                    あなただけの旅行プランを<br>
+                    <span>見つけよう</span>
+                </h2>
+
+                <p>
+                    8つの質問に答えてください。<br>
+                    あなたの好みに合った旅行先を診断します。
+                </p>
+
+            </div>
+
+
+            <div class="quiz-card" id="quizCard">
+
+                <!-- 進行状況 -->
+                <div class="quiz-progress">
+
+                    <div class="progress-info">
+                        <span id="questionNumber">QUESTION 1</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- 質問 -->
+                <div id="questionArea">
+
+                    <p class="question-category" id="questionCategory">
+                        TRAVEL STYLE
+                    </p>
+
+                    <h3 id="questionText">
+                        誰と旅行しますか？
+                    </h3>
+
+                    <div id="choices" class="choices"></div>
+
+                </div>
+
+
+                <!-- ボタン -->
+                <div class="quiz-buttons">
+
+                    <button
+                        id="backButton"
+                        class="sub-button"
+                        type="button">
+                        ← 戻る
+                    </button>
+
+                    <button
+                        id="nextButton"
+                        class="main-button small-button"
+                        type="button"
+                        disabled>
+                        次へ →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             診断結果
+        ========================== -->
+
+        <section id="resultSection" class="result-section">
+
+            <div class="result-card">
+
+                <p class="eyebrow">YOUR RESULT</p>
+
+                <h2>
+                    あなたにおすすめの<br>
+                    <span>旅行先は……</span>
+                </h2>
+
+                <div class="result-region" id="resultRegion">
+                    京都
+                </div>
+
+                <p class="result-catch" id="resultCatch">
+                    歴史と日本文化を感じる旅へ。
+                </p>
+
+                <div class="result-description" id="resultDescription">
+                </div>
+
+
+                <div class="result-tags" id="resultTags">
+                </div>
+
+
+                <div class="result-grid">
+
+                    <div class="result-info">
+
+                        <span>🏯 おすすめスポット</span>
+                        <strong id="resultSpots"></strong>
+
+                    </div>
+
+                    <div class="result-info">
+
+                        <span>🍴 おすすめグルメ</span>
+                        <strong id="resultFood"></strong>
+
+                    </div>
+
+                    <div class="result-info">
+
+                        <span>🌸 おすすめ時期</span>
+                        <strong id="resultSeason"></strong>
+
+                    </div>
+
+                    <div class="result-info">
+
+                        <span>💰 予算目安</span>
+                        <strong id="resultBudget"></strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-alternatives">
+
+                    <p class="result-alternatives-title">
+                        他にはこんな場所がおすすめ！
+                    </p>
+
+                    <div class="result-alternative-list" id="resultAlternatives"></div>
+
+                </div>
+
+
+                <div class="result-actions">
+
+                    <button
+                        id="detailsButton"
+                        class="main-button">
+                        この地域を詳しく見る →
+                    </button>
+
+                    <button
+                        id="retryButton"
+                        class="sub-button">
+                        もう一度診断する
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             地域一覧
+        ========================== -->
+
+        <section id="regions" class="regions-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">DESTINATIONS</p>
+
+                <h2>
+                    地域から<br>
+                    <span>探してみる</span>
+                </h2>
+
+                <p>
+                    気になる地域から日本の旅を探すこともできます。
+                </p>
+
+            </div>
+
+
+            <div class="region-grid" id="regionGrid">
+
+                <!-- JavaScriptで生成 -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             このサイトについて
+        ========================== -->
+
+        <section id="about" class="about-section">
+
+            <div class="about-inner">
+
+                <div>
+
+                    <p class="eyebrow">ABOUT</p>
+
+                    <h2>
+                        「有名だから」ではなく、<br>
+                        <span>「あなたに合うから」</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    旅しるべは、旅行先を決められない人のための
+                    個人旅行ガイドサイトです。
+                    <br><br>
+                    いくつかの質問に答えることで、
+                    あなたの好みや旅行スタイルに合った
+                    日本の地域を提案します。
+                    <br><br>
+                    知らなかった日本を見つけるきっかけになれば幸いです。
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         フッター
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            旅しるべ
+        </div>
+
+        <p>
+            あなたに合った日本の旅を見つけよう。
+        </p>
+
+        <small>
+            © 2026 旅しるべ
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
