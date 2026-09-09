@@ -880,6 +880,27 @@ footer p {
     margin-bottom: 20px;
 }
 
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    color: #968680;
+    font-size: 12px;
+}
+
+.language-switcher a {
+    color: #eee4df;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.language-switcher a:hover,
+.language-switcher a[aria-current="page"] {
+    color: #f0b29d;
+}
+
 footer small {
     color: #968680;
 

@@ -863,6 +863,30 @@ const questions = [
 
 ];
 
+const englishQuestionContent = [
+    ["TRAVEL STYLE", "Who are you traveling with?", [["Solo", "I want to travel at my own pace"], ["Friends", "I want to have fun with everyone"], ["Family", "I want to relax and enjoy time with my family"], ["Partner", "I want to make memories together"]]],
+    ["WHAT DO YOU WANT?", "What are you most excited about?", [["Nature", "Beautiful scenery and the great outdoors"], ["History and culture", "Japanese traditions and history"], ["Food", "I want to enjoy delicious food"], ["Shopping and city life", "I want to have fun in the city"], ["Hot springs", "I want to relax and recharge"], ["Anime and games", "I want to enjoy Japanese pop culture"], ["Sea and resorts", "I want to relax by the sea"]]],
+    ["ATMOSPHERE", "What kind of place do you want to visit?", [["Famous sights", "I want to visit classic attractions"], ["Hidden gems", "I want to discover somewhere different"], ["Quiet places", "I want a peaceful trip"], ["Lively cities", "I enjoy energetic streets"]]],
+    ["TRAVEL MOOD", "What kind of trip do you want?", [["Take it easy", "I do not want to pack my schedule"], ["Visit many places", "I want to see as much as possible"], ["Take photos", "I want to capture beautiful scenery"], ["Eat my way around", "Food is the main reason for my trip!"], ["Something extraordinary", "I want an experience unlike everyday life"]]],
+    ["JAPAN", "What do you want to see in Japan?", [["Traditional culture", "Kimono, temples, shrines, and old streets"], ["A big city", "Skyscrapers and busy downtown streets"], ["Beautiful nature", "Mountains, lakes, flowers, and snow"], ["The sea", "Blue water and tropical scenery"], ["Food culture", "Local dishes unique to each region"]]],
+    ["FOOD", "Which best describes your approach to food?", [["Local food comes first", "I travel to eat!"], ["I want to visit famous restaurants", "I want to find well-reviewed places"], ["I want to try many things", "A little bit of everything"], ["Sightseeing over food", "I want to see lots of places"]]],
+    ["JAPANESE ATMOSPHERE", "What kind of atmosphere do you like?", [["Lively places", "Crowds are fine if the place is fun"], ["Peaceful places", "I want to take things slowly"], ["Mysterious places", "I love atmospheric scenery"], ["Stylish places", "I want photogenic places"], ["Old Japan", "I want to feel the spirit of Japan"]]],
+    ["MEMORIES", "What matters most on a trip?", [["Unforgettable scenery", "I want to see spectacular views"], ["Delicious food", "Meals are an important part of memories"], ["Japanese culture", "I want an experience unique to Japan"], ["Activities", "I want to try many things"], ["Relaxation", "I want to forget everyday life"]]]
+];
+
+const englishRegions = {
+    hokkaido: { name: "Hokkaido", catch: "A journey filled with vast nature and delicious food.", description: "Perfect for travelers who want grand landscapes, fresh food, and time away from the bustle of the city.", tags: ["Nature", "Scenery", "Food", "Relaxation"], spots: "Biei and Furano / Otaru / Sapporo / Hakodate", food: "Seafood bowls / Jingisukan / Soup curry", season: "Summer and winter", budget: "About ¥50,000–¥100,000" },
+    tokyo: { name: "Tokyo", catch: "An exciting journey made possible by the big city.", description: "Enjoy shopping, food, anime, games, and nightlife all in one vibrant city.", tags: ["City", "Shopping", "Pop culture", "Nightlife"], spots: "Asakusa / Shibuya / Shinjuku / Akihabara / Tokyo Tower", food: "Sushi / Ramen / Monjayaki", season: "Spring and autumn", budget: "About ¥30,000–¥80,000" },
+    kyoto: { name: "Kyoto", catch: "A journey into traditional Japanese culture.", description: "Perfect for travelers who want temples, traditional culture, and beautiful historic streets.", tags: ["History", "Tradition", "Temples", "Photography"], spots: "Kiyomizu-dera / Fushimi Inari / Arashiyama / Gion", food: "Yudofu / Matcha sweets / Kyoto cuisine", season: "Spring and autumn", budget: "About ¥30,000–¥80,000" },
+    osaka: { name: "Osaka", catch: "Eat, play, and laugh on a lively journey.", description: "Enjoy local food, street dining, and an energetic city that is perfect for trips with friends.", tags: ["Food", "Street dining", "Lively", "Friends"], spots: "Dotonbori / Shinsekai / Osaka Castle / USJ", food: "Takoyaki / Okonomiyaki / Kushikatsu", season: "Spring and autumn", budget: "About ¥30,000–¥70,000" },
+    fukuoka: { name: "Fukuoka", catch: "Enjoy great food and city walks with ease.", description: "A compact city where you can balance food, street stalls, and sightseeing.", tags: ["Food", "Street stalls", "City walks", "Compact"], spots: "Hakata / Tenjin / Nakasu / Dazaifu Tenmangu", food: "Hakata ramen / Motsunabe / Mentaiko", season: "Spring and autumn", budget: "About ¥20,000–¥60,000" },
+    miyagi: { name: "Miyagi", catch: "A journey filled with sea views, nature, and delicious food.", description: "Enjoy Matsushima, Sendai food, and a comfortable balance of nature and city life.", tags: ["Sea", "Scenery", "Food", "Warmth"], spots: "Matsushima / Sendai / Kesennuma / Japan's Three Views", food: "Beef tongue / Oysters / Sendai miso ramen", season: "Spring and autumn", budget: "About ¥30,000–¥70,000" },
+    nagano: { name: "Nagano", catch: "A refined journey of mountains and hot springs.", description: "Take your time with mountain scenery, hot springs, nature, and local flavors.", tags: ["Nature", "Hot springs", "Mountains", "Relaxation"], spots: "Karuizawa / Hakuba / Kamikochi / Obuse", food: "Shinshu soba / Oyaki / Local sake", season: "Spring, summer, and autumn", budget: "About ¥30,000–¥80,000" },
+    ehime: { name: "Ehime", catch: "A relaxing journey through Shikoku's sea and hot springs.", description: "A calm destination where you can enjoy the sea, islands, hot springs, and local sweets.", tags: ["Sea", "Hot springs", "Quiet", "Food"], spots: "Dogo Onsen / Matsuyama / Uwajima / Shimanami Kaido", food: "Shimanami cuisine / Udon / Kamaboko", season: "Spring and autumn", budget: "About ¥20,000–¥60,000" },
+    kumamoto: { name: "Kumamoto", catch: "A satisfying journey of hot springs and local food.", description: "A welcoming region with beautiful nature, hot springs, a historic castle, and approachable food culture.", tags: ["Hot springs", "Castle", "Street food", "Healing"], spots: "Kumamoto Castle / Aso / Kikuchi / Yufuin", food: "Kumamoto ramen / Horse sashimi / Local cuisine", season: "Spring and autumn", budget: "About ¥30,000–¥70,000" },
+    okinawa: { name: "Okinawa", catch: "Enjoy blue seas and a slower pace of life.", description: "Perfect for travelers who want beaches, nature, resorts, and a break from everyday life.", tags: ["Sea", "Nature", "Resort", "Relaxation"], spots: "Churaumi Aquarium / Kokusai Street / Kouri Island / Ishigaki Island", food: "Okinawa soba / Taco rice / Sea grapes", season: "Spring, summer, and autumn", budget: "About ¥40,000–¥100,000" }
+};
+
 
 /* ------------------------------------------
    変数
@@ -960,6 +984,125 @@ const resultAlternatives =
 const regionGrid =
     document.getElementById("regionGrid");
 
+const englishLink =
+    document.getElementById("englishLink");
+
+const japaneseLink =
+    document.getElementById("japaneseLink");
+
+const isEnglish =
+    new URLSearchParams(window.location.search).get("lang") === "en";
+
+function updateLanguageSelection() {
+    const activeLink = isEnglish ? englishLink : japaneseLink;
+    const inactiveLink = isEnglish ? japaneseLink : englishLink;
+
+    activeLink.setAttribute("aria-current", "page");
+    inactiveLink.removeAttribute("aria-current");
+}
+
+updateLanguageSelection();
+
+function getQuestions() {
+    if (!isEnglish) {
+        return questions;
+    }
+
+    return questions.map(function(question, questionIndex) {
+        const translation = englishQuestionContent[questionIndex];
+
+        return {
+            ...question,
+            category: translation[0],
+            question: translation[1],
+            choices: question.choices.map(function(choice, choiceIndex) {
+                return {
+                    ...choice,
+                    text: translation[2][choiceIndex][0],
+                    description: translation[2][choiceIndex][1]
+                };
+            })
+        };
+    });
+}
+
+function getRegions() {
+    return isEnglish ? englishRegions : regions;
+}
+
+function applyLanguage() {
+    if (!isEnglish) {
+        return;
+    }
+
+    document.documentElement.lang = "en";
+    document.title = "Tabishirube | Find Your Perfect Japan Trip";
+
+    document.querySelector(".logo small").textContent =
+        "Find your perfect Japan trip";
+
+    document.querySelectorAll(".nav a")[0].textContent = "Home";
+    document.querySelectorAll(".nav a")[1].textContent = "Travel Quiz";
+    document.querySelectorAll(".nav a")[2].textContent = "Destinations";
+    document.querySelectorAll(".nav a")[3].textContent = "About";
+
+    document.querySelector(".hero h1").innerHTML =
+        "Where do you<br><span>want to go?</span>";
+    document.querySelector(".hero-description").innerHTML =
+        "Answer a few questions and find<br>the perfect Japan trip for you.";
+    startButton.innerHTML = "Start the travel quiz <span>→</span>";
+
+    document.querySelector("#diagnosis h2").innerHTML =
+        "Find a travel plan<br><span>made for you</span>";
+    document.querySelector("#diagnosis .section-heading > p:last-child").innerHTML =
+        "Answer 8 questions.<br>We will find a destination that matches your style.";
+    backButton.textContent = "← Back";
+
+    document.querySelector("#resultSection h2").innerHTML =
+        "Your recommended<br><span>destination is...</span>";
+    document.querySelectorAll(".result-info span")[0].textContent = "🏯 Recommended spots";
+    document.querySelectorAll(".result-info span")[1].textContent = "🍴 Recommended food";
+    document.querySelectorAll(".result-info span")[2].textContent = "🌸 Best season";
+    document.querySelectorAll(".result-info span")[3].textContent = "💰 Estimated budget";
+    document.querySelector(".result-alternatives-title").textContent =
+        "You may also like these destinations";
+    detailsButton.textContent = "Explore this region →";
+    retryButton.textContent = "Take the quiz again";
+
+    document.querySelector("#regions h2").innerHTML =
+        "Explore by<br><span>destination</span>";
+    document.querySelector("#regions .section-heading > p:last-child").textContent =
+        "You can also explore Japan by choosing a region.";
+
+    document.querySelector("#about h2").innerHTML =
+        "Not because it is famous,<br><span>but because it suits you</span>";
+    document.querySelector("#about .about-inner > p").innerHTML =
+        "Tabishirube is a personal travel guide for people who are not sure where to go.<br><br>Answer a few questions and we will suggest a region of Japan that matches your preferences and travel style.<br><br>We hope this helps you discover a side of Japan you did not know.";
+
+    document.querySelector("footer p").textContent =
+        "Find the Japan trip that suits you.";
+    document.querySelector(".language-switcher span").textContent = "Language";
+    japaneseLink.textContent = "日本語";
+    englishLink.textContent = "English";
+    document.querySelector("footer small").textContent = "© 2026 Tabishirube";
+}
+
+applyLanguage();
+
+if (englishLink) {
+    englishLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "index.html?lang=en";
+    });
+}
+
+if (japaneseLink) {
+    japaneseLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "index.html?lang=ja";
+    });
+}
+
 
 /* ------------------------------------------
    診断開始
@@ -985,8 +1128,10 @@ startButton.addEventListener("click", function() {
 
 function showQuestion() {
 
+    const localizedQuestions = getQuestions();
+
     const question =
-        questions[currentQuestion];
+        localizedQuestions[currentQuestion];
 
     questionText.textContent =
         question.question;
@@ -995,7 +1140,9 @@ function showQuestion() {
         question.category;
 
     questionNumber.textContent =
-        `QUESTION ${currentQuestion + 1}`;
+        isEnglish
+            ? `QUESTION ${currentQuestion + 1}`
+            : `QUESTION ${currentQuestion + 1}`;
 
     const percentage =
         Math.round(
@@ -1094,16 +1241,16 @@ function showQuestion() {
 
     if (
         currentQuestion ===
-        questions.length - 1
+        localizedQuestions.length - 1
     ) {
 
         nextButton.textContent =
-            "診断結果を見る →";
+            isEnglish ? "See my results →" : "診断結果を見る →";
 
     } else {
 
         nextButton.textContent =
-            "次へ →";
+            isEnglish ? "Next →" : "次へ →";
 
     }
 
@@ -1259,8 +1406,10 @@ function calculateResult() {
 
 function showResult(regionKey) {
 
+    const localizedRegions = getRegions();
+
     const region =
-        regions[regionKey];
+        localizedRegions[regionKey];
 
     const resultAlternativesWrap =
         document.querySelector(".result-alternatives");
@@ -1340,13 +1489,13 @@ function showResult(regionKey) {
                     "result-alternative-rank";
 
                 rankLabel.textContent =
-                    `${index + 1}位`;
+                    isEnglish ? `#${index + 1}` : `${index + 1}位`;
 
                 const name =
                     document.createElement("strong");
 
                 name.textContent =
-                    regions[key].name;
+                    localizedRegions[key].name;
 
                 const score =
                     document.createElement("small");
@@ -1412,7 +1561,9 @@ detailsButton.addEventListener(
          */
 
         alert(
-            `${regions[region].name}の詳細ページは、これから作成できます！`
+            isEnglish
+                ? `A detailed page for ${getRegions()[region].name} can be added here.`
+                : `${getRegions()[region].name}の詳細ページは、これから作成できます！`
         );
 
     }
@@ -1475,6 +1626,8 @@ retryButton.addEventListener(
 
 function createRegionCards() {
 
+    const localizedRegions = getRegions();
+
     regionGrid.innerHTML = "";
 
 
@@ -1483,7 +1636,7 @@ function createRegionCards() {
     ) {
 
         const region =
-            regions[key];
+            localizedRegions[key];
 
 
         const card =
@@ -1501,7 +1654,7 @@ function createRegionCards() {
             </p>
 
             <button type="button">
-                この地域を診断結果にする →
+                ${isEnglish ? "Choose this destination →" : "この地域を診断結果にする →"}
             </button>
         `;
 
