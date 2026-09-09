@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="旅しるべの東京旅行ガイド。おすすめスポット、東京グルメ、出発地からの交通費を紹介します。">
+    <title>東京の旅｜旅しるべ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tokyo.css">
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="index.html" aria-label="旅しるべ ホーム">
+            <span class="logo-mark">旅</span>
+            <span>
+                <strong>旅しるべ</strong>
+                <small>あなたに合った日本の旅</small>
+            </span>
+        </a>
+        <nav class="nav">
+            <a href="index.html" data-i18n="navHome">ホーム</a>
+            <a href="#spots" data-i18n="navSpots">スポット</a>
+            <a href="#food" data-i18n="navFood">グルメ</a>
+            <a href="#transport" data-i18n="navTransport">交通費</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tokyo-hero">
+            <div class="tokyo-hero-inner">
+                <div>
+                    <p class="eyebrow">TOKYO / CITY GUIDE</p>
+                    <h1>東京で、<br><span>好きなものを巡る。</span></h1>
+                    <p class="tokyo-lead" data-i18n="heroLead">街の熱気、昔ながらの風景、夜まで続くおいしい時間。気分に合わせて旅のリズムを変えられるのが、東京の魅力です。</p>
+                    <div class="tokyo-hero-actions">
+                        <a class="main-button" href="#spots" data-i18n="viewSpots">おすすめを見る <span>↓</span></a>
+                        <a class="sub-button" href="index.html#diagnosis" data-i18n="backDiagnosis">診断に戻る</a>
+                    </div>
+                </div>
+                <div class="tokyo-hero-note">
+                    <span>TRIP MOOD</span>
+                    <strong data-i18n="moodTitle">刺激的に、<br>自由に。</strong>
+                    <small data-i18n="moodText">1泊2日から楽しめる<br>都市のショートトリップ</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="tokyo-section" id="spots">
+            <div class="tokyo-section-heading">
+                <p class="eyebrow">RECOMMENDED SPOTS</p>
+                <h2 data-i18n="spotsTitle">東京らしさに出会う<br><span>4つのエリア</span></h2>
+                <p data-i18n="spotsLead">王道から夜の街まで、気分に合わせて選べる東京の定番です。</p>
+            </div>
+            <div class="tokyo-card-grid">
+                <article class="tokyo-card spot-card spot-asakusa">
+                    <img class="spot-image" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Kaminarimon Gate in Asakusa">
+                    <span class="card-number">01</span>
+                    <div><h3 data-i18n="asakusaName">浅草</h3><p data-i18n="asakusaText">雷門から仲見世を歩き、東京の下町と新しい景色を一度に楽しむ。</p><span class="card-tag" data-i18n="asakusaTag">歴史・街歩き</span></div>
+                </article>
+                <article class="tokyo-card spot-card spot-shibuya">
+                    <img class="spot-image" src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Shibuya Crossing">
+                    <span class="card-number">02</span>
+                    <div><h3 data-i18n="shibuyaName">渋谷</h3><p data-i18n="shibuyaText">スクランブル交差点や展望台から、動き続ける東京を眺める。</p><span class="card-tag" data-i18n="shibuyaTag">ショッピング・展望</span></div>
+                </article>
+                <article class="tokyo-card spot-card spot-akihabara">
+                    <img class="spot-image" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Akihabara_Night.jpg" alt="Akihabara Electric Town at night">
+                    <span class="card-number">03</span>
+                    <div><h3 data-i18n="akihabaraName">秋葉原</h3><p data-i18n="akihabaraText">アニメ、ゲーム、電気街。好きなものを深掘りできるサブカルの街。</p><span class="card-tag" data-i18n="akihabaraTag">アニメ・ゲーム</span></div>
+                    <a class="spot-image-credit" href="https://commons.wikimedia.org/wiki/File:Akihabara_Night.jpg" target="_blank" rel="noopener noreferrer">Photo: ElHeineken / Wikimedia Commons</a>
+                </article>
+                <article class="tokyo-card spot-card spot-tokyotower">
+                    <img class="spot-image" src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Tokyo Tower against the night sky">
+                    <span class="card-number">04</span>
+                    <div><h3 data-i18n="towerName">東京タワー</h3><p data-i18n="towerText">夕方から夜に訪れて、東京の灯りが広がる時間を味わう。</p><span class="card-tag" data-i18n="towerTag">夜景・写真</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="tokyo-section tokyo-food-section" id="food">
+            <div class="tokyo-section-heading">
+                <p class="eyebrow">TOKYO EATS</p>
+                <h2 data-i18n="foodTitle">食べたいものから決める<br><span>東京の夜。</span></h2>
+            </div>
+            <div class="food-list">
+                <article><span class="food-icon">鮨</span><div><h3 data-i18n="sushiName">寿司</h3><p data-i18n="sushiText">気軽な立ち食いから特別な一貫まで、予算に合わせて選べます。</p></div><strong>¥1,500〜</strong></article>
+                <article><span class="food-icon">麺</span><div><h3 data-i18n="ramenName">ラーメン</h3><p data-i18n="ramenText">醤油、塩、家系など、街ごとに違う一杯を食べ比べ。</p></div><strong>¥1,000〜</strong></article>
+                <article><span class="food-icon">月</span><div><h3 data-i18n="monjaName">もんじゃ焼き</h3><p data-i18n="monjaText">月島で鉄板を囲みながら、東京らしい粉ものを楽しむ。</p></div><strong>¥1,500〜</strong></article>
+            </div>
+        </section>
+
+        <section class="tokyo-section transport-section" id="transport">
+            <div class="tokyo-section-heading">
+                <p class="eyebrow">GETTING TO TOKYO</p>
+                <h2 data-i18n="transportTitle">あなたの出発地から<br><span>東京までの目安</span></h2>
+                <p data-i18n="transportLead">片道・大人1名の概算です。時期、予約時期、座席種別で変わるため、計画の入口としてご利用ください。</p>
+            </div>
+            <div class="transport-panel">
+                <div class="transport-select-grid">
+                    <div>
+                        <label for="originType" data-i18n="originRegion">出発地の地域</label>
+                        <select id="originType">
+                            <option value="japan" data-i18n="japan">日本</option>
+                            <option value="overseas" data-i18n="overseas">海外</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="originSelect" data-i18n="originPlace">出発地を選ぶ</label>
+                        <select id="originSelect"></select>
+                    </div>
+                </div>
+                <div class="transport-result" id="transportResult" aria-live="polite"></div>
+                <p class="transport-note" data-i18n="transportNote">表示価格は片道・大人1名、通常期の概算です。正確な運賃・空席は各交通事業者の公式サイトでご確認ください。</p>
+            </div>
+        </section>
+
+        <section class="video-section" aria-labelledby="videoTitle">
+            <div class="video-placeholder">
+                <div class="video-mark" aria-hidden="true">▶</div>
+                <div>
+                    <p class="eyebrow">COMING SOON / TOKYO SHORT FILM</p>
+                    <h2 id="videoTitle" data-i18n="videoTitle">東京の短編PR動画をもしかしたら多分おそらく<br>ひょっとするか可能性といたしましてはここに掲載します。<br>(多分)(気が向いたら)(やる気次第)(祈れ)</h2>
+                    <p data-i18n="videoText">街の音や旅の空気まで伝える、地域別の短編動画スペースです。</p>
+                </div>
+                <span class="video-status">VIDEO AREA</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">旅しるべ</div>
+        <p data-i18n="footerText">あなたに合った日本の旅を見つけよう。</p>
+        <div class="language-switcher" aria-label="Language">
+            <span>Language</span>
+            <a href="tokyo.html?lang=ja" id="japaneseLink">日本語</a>
+            <span aria-hidden="true"> / </span>
+            <a href="tokyo.html?lang=en" id="englishLink">English</a>
+        </div>
+        <small>© 2026 旅しるべ</small>
+    </footer>
+
+    <script src="tokyo.js"></script>
+</body>
+</html>

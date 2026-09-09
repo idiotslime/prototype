@@ -1,0 +1,108 @@
+
+/* 東京詳細ページ */
+
+.tokyo-hero {
+    min-height: 570px;
+    padding: 100px 6% 90px;
+    color: #fffaf5;
+    background: linear-gradient(118deg, #332b31 0%, #55404a 48%, #9b4f4b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.tokyo-hero::after {
+    content: "TOKYO";
+    position: absolute;
+    right: -2vw;
+    bottom: -55px;
+    color: rgba(255, 255, 255, 0.08);
+    font: 800 clamp(130px, 24vw, 320px)/1 Arial, sans-serif;
+    letter-spacing: 0.03em;
+}
+
+.tokyo-hero-inner {
+    width: min(1120px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.tokyo-hero .eyebrow { color: #f0b29d; }
+.tokyo-hero h1 { font-size: clamp(46px, 7vw, 84px); line-height: 1.16; letter-spacing: 0.02em; margin-bottom: 24px; }
+.tokyo-hero h1 span { color: #f0b29d; }
+.tokyo-lead { max-width: 540px; color: #ead9d1; font-size: 16px; }
+.tokyo-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+.tokyo-hero-actions .main-button { background: #f0b29d; color: #3b2a2c; box-shadow: none; }
+.tokyo-hero-actions .main-button:hover { background: #ffd0be; }
+.tokyo-hero-actions .sub-button { border-color: rgba(255,255,255,0.35); background: transparent; color: #fffaf5; }
+.tokyo-hero-actions .sub-button:hover { background: rgba(255,255,255,0.1); }
+
+.tokyo-hero-note { padding: 28px; border: 1px solid rgba(255,255,255,0.25); border-radius: 2px; background: rgba(255,255,255,0.09); }
+.tokyo-hero-note span, .video-status { color: #f0b29d; font-size: 11px; letter-spacing: 0.2em; font-weight: bold; }
+.tokyo-hero-note strong { display: block; margin: 14px 0 20px; font-size: 31px; line-height: 1.35; }
+.tokyo-hero-note small { color: #ddc9c1; }
+
+.tokyo-section { padding: 105px 6%; }
+.tokyo-section-heading { width: min(700px, 100%); margin: 0 auto 45px; text-align: center; }
+.tokyo-section-heading h2 { font-size: clamp(31px, 5vw, 51px); line-height: 1.35; margin-bottom: 16px; }
+.tokyo-section-heading h2 span { color: #a84444; }
+.tokyo-section-heading > p:last-child { color: #786a63; }
+.tokyo-card-grid { width: min(1120px, 100%); margin: auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.tokyo-card { min-height: 285px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; position: relative; overflow: hidden; background-position: center; background-size: cover; }
+.tokyo-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(25,20,22,0.8), rgba(25,20,22,0.08)); }
+.spot-image { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
+.tokyo-card::before { z-index: 1; }
+.spot-asakusa { background: #b57b67; }
+.spot-shibuya { background: #4d6379; }
+.spot-akihabara { background: #895066; }
+.spot-tokyotower { background: #a55a45; }
+.tokyo-card > * { position: relative; z-index: 1; }
+.tokyo-card > .spot-image { position: absolute; z-index: 0; }
+.spot-image-credit { position: absolute !important; right: 12px; bottom: 10px; z-index: 2 !important; color: rgba(255,255,255,0.78); font-size: 9px; text-decoration: none; }
+.spot-image-credit:hover { color: #fff; text-decoration: underline; }
+.card-number { align-self: flex-end; font-size: 12px; letter-spacing: 0.14em; color: #f6c8b7; }
+.tokyo-card h3 { font-size: 31px; margin-bottom: 7px; }
+.tokyo-card p { max-width: 420px; color: #f5e9e2; font-size: 14px; line-height: 1.75; }
+.card-tag { display: inline-block; margin-top: 14px; color: #f6c8b7; font-size: 12px; letter-spacing: 0.08em; }
+.tokyo-food-section { background: #f7ece5; }
+.food-list { width: min(900px, 100%); margin: auto; }
+.food-list article { display: grid; grid-template-columns: 72px 1fr auto; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid #decfc7; }
+.food-icon { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; color: #a84444; background: #fffaf5; font-weight: bold; }
+.food-list h3 { font-size: 21px; margin-bottom: 3px; }
+.food-list p { color: #786a63; font-size: 13px; }
+.food-list strong { color: #a84444; font-size: 14px; white-space: nowrap; }
+.transport-section { background: #fffaf5; }
+.transport-panel { width: min(760px, 100%); margin: auto; padding: 35px; background: #fff; border: 1px solid #eadfd5; box-shadow: 0 20px 55px rgba(78,54,45,0.08); }
+.transport-select-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 16px; }
+.transport-panel label { display: block; color: #6f5f56; font-size: 13px; font-weight: bold; margin-bottom: 9px; }
+.transport-panel select { width: 100%; padding: 14px; border: 1px solid #d8c9be; border-radius: 4px; color: #342b2b; background: #fffaf5; font: inherit; }
+.transport-result { margin-top: 26px; padding-top: 25px; border-top: 1px solid #eadfd5; }
+.transport-result h3 { font-size: 24px; margin-bottom: 5px; }
+.transport-result .transport-route { color: #a84444; font-size: 14px; font-weight: bold; }
+.transport-result .transport-price { display: block; margin-top: 12px; color: #342b2b; font-size: 28px; font-weight: bold; }
+.transport-result .transport-time { color: #786a63; font-size: 13px; }
+.transport-note { margin-top: 22px; color: #967f74; font-size: 11px; }
+.video-section { padding: 30px 6% 110px; background: #fffaf5; }
+.video-placeholder { width: min(1120px, 100%); min-height: 245px; margin: auto; padding: 40px 50px; display: grid; grid-template-columns: 80px 1fr auto; gap: 28px; align-items: center; border: 1px dashed #c99688; background: #fff6f0; }
+.video-mark { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: #a84444; padding-left: 4px; }
+.video-placeholder h2 { font-size: clamp(24px, 4vw, 38px); line-height: 1.35; margin: 8px 0 10px; }
+.video-placeholder p:last-child { color: #786a63; font-size: 13px; }
+.video-status { align-self: start; padding-top: 8px; }
+
+@media (max-width: 700px) {
+    .tokyo-hero { min-height: auto; padding: 75px 6%; }
+    .tokyo-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .tokyo-hero-note { max-width: 310px; }
+    .tokyo-section { padding: 75px 6%; }
+    .tokyo-card-grid { grid-template-columns: 1fr; }
+    .food-list article { grid-template-columns: 58px 1fr; gap: 16px; }
+    .food-list strong { grid-column: 2; }
+    .transport-panel { padding: 25px 20px; }
+    .transport-select-grid { grid-template-columns: 1fr; gap: 14px; }
+    .video-placeholder { grid-template-columns: 58px 1fr; padding: 30px 24px; gap: 20px; }
+    .video-status { grid-column: 2; }
+}

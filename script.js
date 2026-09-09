@@ -1550,6 +1550,11 @@ detailsButton.addEventListener(
         const region =
             detailsButton.dataset.region;
 
+        if (region === "tokyo") {
+            window.location.href = "tokyo.html";
+            return;
+        }
+
         /*
          * 現段階では詳細ページがまだないため、
          * 仮の案内を表示します。
