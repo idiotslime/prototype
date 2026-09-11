@@ -87,11 +87,8 @@
 .transport-result .transport-time { color: #786a63; font-size: 13px; }
 .transport-note { margin-top: 22px; color: #967f74; font-size: 11px; }
 .video-section { padding: 30px 6% 110px; background: #fffaf5; }
-.video-placeholder { width: min(1120px, 100%); min-height: 245px; margin: auto; padding: 40px 50px; display: grid; grid-template-columns: 80px 1fr auto; gap: 28px; align-items: center; border: 1px dashed #c99688; background: #fff6f0; }
-.video-mark { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: #a84444; padding-left: 4px; }
-.video-placeholder h2 { font-size: clamp(24px, 4vw, 38px); line-height: 1.35; margin: 8px 0 10px; }
-.video-placeholder p:last-child { color: #786a63; font-size: 13px; }
-.video-status { align-self: start; padding-top: 8px; }
+.video-placeholder { width: min(1120px, 100%); min-height: 245px; margin: auto; padding: 28px; display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; border: 1px solid #eadfd5; background: #fff6f0; box-shadow: 0 20px 55px rgba(78,54,45,0.08); }
+.tokyo-video { width: 100%; aspect-ratio: 16 / 9; display: block; border-radius: 2px; background: #332b31; object-fit: cover; }
 
 @media (max-width: 700px) {
     .tokyo-hero { min-height: auto; padding: 75px 6%; }
@@ -103,6 +100,5 @@
     .food-list strong { grid-column: 2; }
     .transport-panel { padding: 25px 20px; }
     .transport-select-grid { grid-template-columns: 1fr; gap: 14px; }
-    .video-placeholder { grid-template-columns: 58px 1fr; padding: 30px 24px; gap: 20px; }
-    .video-status { grid-column: 2; }
+    .video-placeholder { padding: 24px; gap: 20px; }
 }

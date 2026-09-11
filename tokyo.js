@@ -38,8 +38,6 @@ const pageText = {
     overseas: "Overseas",
     originPlace: "Choose your starting point",
     transportNote: "Approximate one-way fare for one adult in a typical season. Check the transport operator's official site for current fares and availability.",
-    videoTitle: "A Tokyo short film will be<br>placed here in the future.",
-    videoText: "A space for regional short videos that capture the sounds and atmosphere of the journey.",
     footerText: "Find the Japan trip that suits you."
 };
 
@@ -245,8 +243,6 @@ function applyLanguage() {
     document.querySelectorAll(".eyebrow")[1].textContent = "RECOMMENDED SPOTS";
     document.querySelector(".tokyo-hero-note span").textContent = "TRIP MOOD";
     document.querySelector(".transport-section .eyebrow").textContent = "GETTING TO TOKYO";
-    document.querySelector(".video-placeholder .eyebrow").textContent = "COMING SOON / TOKYO SHORT FILM";
-    document.querySelector(".video-status").textContent = "VIDEO AREA";
     document.querySelector("footer .footer-logo").textContent = "Tabishirube";
     document.querySelector("footer small").textContent = "© 2026 Tabishirube";
 

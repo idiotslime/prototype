@@ -1,0 +1,134 @@
+
+/* 旅しるべの案内役 */
+.site-companion {
+    --companion-ink: #342b2b;
+    --companion-accent: #a84444;
+    --companion-soft: #fff7f1;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1000;
+    width: min(520px, calc(100vw - 28px));
+    color: var(--companion-ink);
+    pointer-events: none;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.site-companion__body {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    gap: 8px;
+}
+
+.site-companion__figure {
+    transform: translateY(160%);
+    transition: transform 2.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-companion.is-visible .site-companion__figure {
+    transform: translateY(0);
+}
+
+.site-companion.is-peeking .site-companion__figure {
+    transform: translateY(160%);
+}
+
+.site-companion__figure {
+    width: 220px;
+    height: 354px;
+    flex: 0 0 220px;
+    margin-bottom: -100px;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 10px 12px rgba(78, 54, 45, 0.16));
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.site-companion__figure:hover {
+    transform: translateY(-7px) rotate(-2deg);
+}
+
+.site-companion__bubble {
+    position: fixed;
+    right: calc(18px + 220px + 8px);
+    bottom: 100px;
+    width: min(260px, calc(100vw - 280px));
+    min-height: 74px;
+    padding: 16px 17px 14px;
+    border: 1px solid #eadfd5;
+    border-radius: 14px 14px 14px 3px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(78, 54, 45, 0.15);
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+    transform-origin: bottom right;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: auto;
+}
+
+.site-companion.is-bubble-visible .site-companion__bubble {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.site-companion.is-peeking .site-companion__bubble {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+}
+
+.site-companion__bubble::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    bottom: 21px;
+    border: 9px solid transparent;
+    border-left-color: #fff;
+}
+
+.site-companion__name {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--companion-accent);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.site-companion__message {
+    min-height: 44px;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+@media (max-width: 550px) {
+    .site-companion {
+        right: 5px;
+        bottom: 10px;
+        width: calc(100vw - 10px);
+    }
+
+    .site-companion__figure {
+        width: 155px;
+        height: 255px;
+        flex-basis: 155px;
+        margin-bottom: -86px;
+    }
+
+    .site-companion__bubble {
+        right: 10px;
+        bottom: 110px;
+        width: min(260px, calc(100vw - 20px));
+        padding: 12px 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-companion__body,
+    .site-companion__bubble,
+    .site-companion__figure {
+        transition: none;
+    }
+}

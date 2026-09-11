@@ -7,6 +7,7 @@
     <title>東京の旅｜旅しるべ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tokyo.css">
+    <link rel="stylesheet" href="companion.css">
 </head>
 <body>
     <header class="header">
@@ -113,15 +114,12 @@
             </div>
         </section>
 
-        <section class="video-section" aria-labelledby="videoTitle">
+        <section class="video-section">
             <div class="video-placeholder">
-                <div class="video-mark" aria-hidden="true">▶</div>
-                <div>
-                    <p class="eyebrow">COMING SOON / TOKYO SHORT FILM</p>
-                    <h2 id="videoTitle" data-i18n="videoTitle">東京の短編PR動画をもしかしたら多分おそらく<br>ひょっとするか可能性といたしましてはここに掲載します。<br>(多分)(気が向いたら)(やる気次第)(祈れ)</h2>
-                    <p data-i18n="videoText">街の音や旅の空気まで伝える、地域別の短編動画スペースです。</p>
-                </div>
-                <span class="video-status">VIDEO AREA</span>
+                <video class="tokyo-video" controls playsinline preload="metadata">
+                    <source src="videos/tokyo/kling_20260909_VIDEO_Create_thi_2867_0.mp4" type="video/mp4">
+                    お使いのブラウザは動画再生に対応していません。
+                </video>
             </div>
         </section>
     </main>
@@ -139,5 +137,6 @@
     </footer>
 
     <script src="tokyo.js"></script>
+    <script src="companion.js"></script>
 </body>
 </html>
